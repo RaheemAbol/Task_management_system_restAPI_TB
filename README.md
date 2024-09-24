@@ -1,14 +1,38 @@
 ### **Ticket Breakdown: Task Management System**
 
 ---
+   ---
+        #### **Ticket 1: Set Up Spring Boot Project**
 
-#### **Ticket 1: Set Up Spring Boot Project**
+        - **Tasks:**
+        1. **Create a new Spring Boot project:**
+        - Use **Spring Initializr** or your preferred method to generate a Spring Boot project.
+        - Add the following dependencies:
+        - **Spring Web** (for building REST APIs)
+        - **Spring Data JPA** (for database interactions)
+        - **MySQL Driver** (to connect to the MySQL database)
+        - **Lombok** (optional, but useful for minimizing boilerplate code)
 
-- **Tasks:**
-  - Set up a Spring Boot project with the necessary dependencies (Spring Web, Spring Data JPA, MySQL Driver).
-  - Make sure to configure the `application.properties` file with your MySQL credentials and set up the `ddl-auto` property for schema generation.
 
----
+  2. **Configure MySQL in `application.properties`:**
+        - Add the MySQL connection properties in `src/main/resources/application.properties`:
+        ```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/task_management_db
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+        ```
+
+        4. **Create the MySQL database:**
+        - Open MySQL Workbench and run:
+        ```sql
+CREATE DATABASE task_management_db;
+     ```
+             - Ensure the database is created successfully before moving to the next task.
+
+        ---
+
 
 #### **Ticket 2: Create the `Task` Entity**
 
