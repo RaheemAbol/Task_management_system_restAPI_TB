@@ -1,7 +1,3 @@
-# Task_management_system
-
----
-
 ### **Ticket Breakdown: Task Management System**
 
 ---
