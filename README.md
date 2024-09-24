@@ -1,40 +1,48 @@
+
+---
+
 ### **Ticket Breakdown: Task Management System**
 
 ---
-   ---
-        #### **Ticket 1: Set Up Spring Boot Project**
 
-        - **Tasks:**
-        1. **Create a new Spring Boot project:**
-        - Use **Spring Initializr** or your preferred method to generate a Spring Boot project.
-        - Add the following dependencies:
-        - **Spring Web** (for building REST APIs)
-        - **Spring Data JPA** (for database interactions)
-        - **MySQL Driver** (to connect to the MySQL database)
-        - **Lombok** (optional, but useful for minimizing boilerplate code)
+#### **Ticket 1: Set Up Spring Boot Project**
 
+- **Tasks:**
+  1. **Create a new Spring Boot project:**
+     - Use **Spring Initializr** or your preferred method to generate a Spring Boot project.
+     - Add the following dependencies:
+       - **Spring Web** (for building REST APIs)
+       - **Spring Data JPA** (for database interactions)
+       - **MySQL Driver** (to connect to the MySQL database)
+       - **Lombok** (optional, but useful for minimizing boilerplate code)
 
-  2. **Configure MySQL in `application.properties`:**
-        - Add the MySQL connection properties in `src/main/resources/application.properties`:
-        ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/task_management_db
-spring.datasource.username=root
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-        ```
+  2. **Initialize version control:**
+     - Initialize a Git repository for the project.
+     - Add a `.gitignore`(this will be included in your spring project when created) file to exclude `target/`, `.idea/`, `.mvn/`, and `*.class` files from Git.
+     - Commit the initial project setup.
+     - Commit each ticket once completed(1-5).
 
-        4. **Create the MySQL database:**
-        - Open MySQL Workbench and run:
-        ```sql
-CREATE DATABASE task_management_db;
+  3. **Configure MySQL in `application.properties`:**
+     - Add the MySQL connection properties in `src/main/resources/application.properties`:
+     ```properties
+     spring.datasource.url=jdbc:mysql://localhost:3306/task_management_db
+     spring.datasource.username=root
+     spring.datasource.password=your_password
+     spring.jpa.hibernate.ddl-auto=update
+     spring.jpa.show-sql=true
      ```
-             - Ensure the database is created successfully before moving to the next task.
 
-        ---
+  4. **Create the MySQL database:**
+     - Open MySQL Workbench and run:
+     ```sql
+     CREATE DATABASE task_management_db;
+     ```
+     - Ensure the database is created successfully before moving to the next task.
 
+---
 
 #### **Ticket 2: Create the `Task` Entity**
+
 
 - **Tasks:**
   - Create the `Task` entity class with the following fields:
